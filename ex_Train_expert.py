@@ -111,6 +111,9 @@ def train():
 
 if __name__ == '__main__':
     
+    # Train experts by using different loss functions to encourage their diversities.
+    # (Section: Experts with Various Forecasting Styles, Two-Stage Training and Penalization)
+    
     train()
         
         

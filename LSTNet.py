@@ -18,6 +18,13 @@ https://github.com/laiguokun/LSTNet         Pytorch implementation
 
 
 class LSTNet(nn.Module):
+    """
+    LSTNet is used as the expert of MoQ.
+    
+    (Section: Experts with Various Forecasting Styles)
+    
+    """
+    
     def __init__(self, args):
         super(LSTNet, self).__init__()
         self.P = args.window                    # the length of input seq

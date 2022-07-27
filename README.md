@@ -1,5 +1,5 @@
 # MoQ
-This repository is the official Pytorch implementation of **_Be Conservative or Be Aggressive? An Adaptive Trade-Off MoE For Time Series Forecasting_**. 
+This repository is the official Pytorch implementation of **_Be Conservative or Be Aggressive? An Adaptive Trade-Off MoE For Time Series Forecasting_**. The codes and data can be used to reproduce the results of MoQ on PM2.5 dataset.
 
 ## Code
 There are 6 python files:
@@ -35,14 +35,28 @@ python ex_Train_expert.py
 python ex_Train_MoQ.py
 ```
 
-In default, two versions of MoQ will be trained in `ex_Train_MoQ.py`:
+In default, two versions of MoQ will be trained and tested in `ex_Train_MoQ.py`:
 
 ```shell
+# Train MoQ by applying penalization mask or Gaussian noise.
+# (Section: Use of penalization during the training process)
+
 penalization = 'mask'  # 'mask' or 'Gaussian'
 train(penalization)
-
-penalization = 'Gaussian' 
+    
+penalization = 'Gaussian' # alpha = 4
 train(penalization)
+
+#%%
+
+# Reproduce the results of MoQ on PM2.5 dataset.
+# (Section: Air Quality Dataset)
+
+penalization = 'mask'  
+test(penalization)
+
+penalization = 'Gaussian' # alpha = 4
+test(penalization)
 ```
 
 If you can comment the lines if only one version is needed.

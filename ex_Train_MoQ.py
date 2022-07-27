@@ -136,6 +136,9 @@ def train(penalization):
             if train_y.shape[0] <= u:
                 Pred_expert_penalized = Pred_expert
             else:
+                
+                # penalize the predictions, (Section: Use of penalization during the training process)
+                
                 if penalization == 'mask':
                     penalization_tensor = utils.Penalization_Mask(train_y, u, num_expert, device)
                     Pred_expert_penalized = [pred*noise for pred, noise in zip(Pred_expert, penalization_tensor)]
@@ -250,18 +253,24 @@ def test(penalization):
 
 if __name__ == '__main__':
     
-    penalization = 'mask'  # 'mask' or 'Gaussian']
+    # Train MoQ by applying penalization mask or Gaussian noise.
+    # (Section: Use of penalization during the training process)
+    
+    penalization = 'mask'  # 'mask' or 'Gaussian'
     train(penalization)
         
-    penalization = 'Gaussian' 
+    penalization = 'Gaussian' # alpha = 4
     train(penalization)
     
     #%%
     
+    # Reproduce the results of MoQ on PM2.5 dataset.
+    # (Section: Air Quality Dataset)
+    
     penalization = 'mask'  
     test(penalization)
     
-    penalization = 'Gaussian' 
+    penalization = 'Gaussian' # alpha = 4
     test(penalization)
     
     

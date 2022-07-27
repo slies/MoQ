@@ -60,6 +60,8 @@ class MoQ(nn.Module):
 
     def __init__(self, manager_model, num_experts):
         """
+        (Section: Methodology)
+        
         Parameters:
             - manager_model: the created model of manager. 
                              E.g.,  

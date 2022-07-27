@@ -5,7 +5,13 @@ import numpy as np
 import torch
 
 
-def AVG_classification_accuracy(true, pred, quantile=0.9):
+def AVG_classification_accuracy(true, pred, quantile=0.95):
+    """
+    This function is used to calculate the metrics "Accuracy" and "Sensitivity" reported in the paper.
+    
+    (Section: Benchmarks and Performance Metrics)
+    
+    """
     peak_val = np.quantile(true, quantile)
     peak_pos = np.where(true >= peak_val)
     non_peak_pos = np.where(true < peak_val)

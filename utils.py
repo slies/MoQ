@@ -10,6 +10,13 @@ import numpy as np
 
 
 class Quantile_Loss(nn.Module):
+    """
+    Implementation of quantile loss.
+    
+    (Section: Quantile Loss & Quantile Regression)
+    
+    """
+    
     
     def __init__(self):
         super(Quantile_Loss, self).__init__()
@@ -30,6 +37,8 @@ class Quantile_Loss(nn.Module):
 def Penalization_Mask(y_true, u, num_expert=4, device=None):
     """
     Creating the penalization mask [0.25, 0.5, 0.75, 1.0] for the experts [E_0.5, E_0.7, E_0.8, E_0.9].
+    
+    (Section: Penalization Mask)
     
     Parameters:
         - y_true: tensor of ground-truth, (batch_size, horizon, out_channels).
@@ -66,6 +75,8 @@ def Penalization_Mask(y_true, u, num_expert=4, device=None):
 def Penalization_GaussianNoise(y_true, u, expert_quantiles=[0.5, 0.7, 0.8, 0.9], alpha=2, device=None):
     """
     Creating the aggressiveness-related Gaussian noise for the provided expert_quantiles.
+    
+    (Section: Penalization via addition of Gaussian Noise)
     
     Parameters:
         - y_true: tensor of ground-truth, (batch_size, horizon, out_channels).
