@@ -2,7 +2,7 @@
 This repository is the official Pytorch implementation of **_Be Conservative or Be Aggressive? An Adaptive Trade-Off MoE For Time Series Forecasting_**. 
 
 ## Code
-There are 6 different python files:
+There are 6 python files:
 - utils.py
 - metrics.py
 - MoQ.py
