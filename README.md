@@ -10,7 +10,7 @@ There are 6 python files:
 - ex_Train_expert.py
 - ex_Train_MoQ.py
 
-`utils.py` and `metrics.py` include some functions which are used in `ex_Train_expert.py` and `ex_Train_MoQ.py`; LSTNet is employed as the expert in our paper, and the file `LSTNet.py` is the official Pytorch implementation of LSTNet, please check the official repository for more details https://github.com/fbadine/LSTNet. `MoQ.py` is the MoE framework used to fuse the predictions of experts, and the details of this model can be found in our paper. `ex_Train_expert.py` and `ex_Train_MoQ.py` are the scripts used to train experts and MoQ; notice that MoQ can only be trained after finishing the training of experts.
+`utils.py` and `metrics.py` include the functions which are used in `ex_Train_expert.py` and `ex_Train_MoQ.py`; LSTNet is employed as the expert in our paper, and the file `LSTNet.py` is the official Pytorch implementation of LSTNet, please check the official repository for more details https://github.com/fbadine/LSTNet. `MoQ.py` is the MoE framework used to fuse the predictions of experts, and the details of this model can be found in our paper. `ex_Train_expert.py` and `ex_Train_MoQ.py` are the scripts used to train experts and MoQ; notice that MoQ can only be trained after finishing the training of experts.
 
 
 ## Data
