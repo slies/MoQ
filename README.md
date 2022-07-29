@@ -1,5 +1,5 @@
 # MoQ
-This repository is the official Pytorch implementation of **_Be Conservative or Be Aggressive? An Adaptive Trade-Off MoE For Time Series Forecasting_**. The codes and data can be used to reproduce the results of MoQ on PM2.5 dataset.
+This repository is the official Pytorch implementation of **_To Be Conservative or To Be Aggressive? A Risk-Adaptive Mixture of Experts for Time Series Forecasting_**. The codes and data can be used to reproduce the results of MoQ on PM2.5 dataset.
 
 ## Code
 There are 6 python files:
